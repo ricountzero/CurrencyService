@@ -40,8 +40,6 @@ docker-compose up --build
 
 > **Note:** If you have a local PostgreSQL instance already running on port 5432, the Docker container's port is not exposed to the host — services communicate via the internal Docker network.
 
-> ```
-
 Once all services are up, the following endpoints are available:
 
 | Service        | URL                           |
