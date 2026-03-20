@@ -1,0 +1,350 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/liodnik/CurrencyService/src/FinanceService/API/FinanceService.API.csproj": {}
+  },
+  "projects": {
+    "/home/liodnik/CurrencyService/src/FinanceService/API/FinanceService.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/liodnik/CurrencyService/src/FinanceService/API/FinanceService.API.csproj",
+        "projectName": "FinanceService.API",
+        "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/API/FinanceService.API.csproj",
+        "packagesPath": "/home/liodnik/.nuget/packages/",
+        "outputPath": "/home/liodnik/CurrencyService/src/FinanceService/API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/liodnik/CurrencyService/nuget.config",
+          "/home/liodnik/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj"
+              },
+              "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/FinanceService.Infrastructure.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/FinanceService.Infrastructure.csproj"
+              },
+              "/home/liodnik/CurrencyService/src/Shared/Auth/Shared.Auth.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/Shared/Auth/Shared.Auth.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj",
+        "projectName": "FinanceService.Application",
+        "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj",
+        "packagesPath": "/home/liodnik/.nuget/packages/",
+        "outputPath": "/home/liodnik/CurrencyService/src/FinanceService/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/liodnik/CurrencyService/nuget.config",
+          "/home/liodnik/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj",
+        "projectName": "FinanceService.Domain",
+        "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj",
+        "packagesPath": "/home/liodnik/.nuget/packages/",
+        "outputPath": "/home/liodnik/CurrencyService/src/FinanceService/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/liodnik/CurrencyService/nuget.config",
+          "/home/liodnik/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/FinanceService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/FinanceService.Infrastructure.csproj",
+        "projectName": "FinanceService.Infrastructure",
+        "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/FinanceService.Infrastructure.csproj",
+        "packagesPath": "/home/liodnik/.nuget/packages/",
+        "outputPath": "/home/liodnik/CurrencyService/src/FinanceService/Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/liodnik/CurrencyService/nuget.config",
+          "/home/liodnik/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Application/FinanceService.Application.csproj"
+              },
+              "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj": {
+                "projectPath": "/home/liodnik/CurrencyService/src/FinanceService/Domain/FinanceService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/liodnik/CurrencyService/src/Shared/Auth/Shared.Auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/liodnik/CurrencyService/src/Shared/Auth/Shared.Auth.csproj",
+        "projectName": "Shared.Auth",
+        "projectPath": "/home/liodnik/CurrencyService/src/Shared/Auth/Shared.Auth.csproj",
+        "packagesPath": "/home/liodnik/.nuget/packages/",
+        "outputPath": "/home/liodnik/CurrencyService/src/Shared/Auth/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/liodnik/CurrencyService/nuget.config",
+          "/home/liodnik/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.124/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

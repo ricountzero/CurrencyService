@@ -1,0 +1,89 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: currencydb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migration:
+    build:
+      context: .
+      dockerfile: src/MigrationService/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=currencydb;Username=postgres;Password=postgres"
+
+  currency-background:
+    build:
+      context: .
+      dockerfile: src/CurrencyBackgroundService/Dockerfile
+    depends_on:
+      migration:
+        condition: service_completed_successfully
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=currencydb;Username=postgres;Password=postgres"
+
+  user-service:
+    build:
+      context: .
+      dockerfile: src/UserService/API/Dockerfile
+    depends_on:
+      migration:
+        condition: service_completed_successfully
+    ports:
+      - "5001:5001"
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=currencydb;Username=postgres;Password=postgres"
+      JwtSettings__Secret: "super-secret-key-change-in-production-32chars!"
+      JwtSettings__Issuer: "CurrencyService"
+      JwtSettings__Audience: "CurrencyServiceClients"
+      JwtSettings__ExpirationMinutes: "60"
+      ASPNETCORE_HTTP_PORTS: ""
+      ASPNETCORE_URLS: "http://0.0.0.0:5001"
+
+  finance-service:
+    build:
+      context: .
+      dockerfile: src/FinanceService/API/Dockerfile
+    depends_on:
+      migration:
+        condition: service_completed_successfully
+    ports:
+      - "5002:5002"
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=currencydb;Username=postgres;Password=postgres"
+      JwtSettings__Secret: "super-secret-key-change-in-production-32chars!"
+      JwtSettings__Issuer: "CurrencyService"
+      JwtSettings__Audience: "CurrencyServiceClients"
+      JwtSettings__ExpirationMinutes: "60"
+      ASPNETCORE_HTTP_PORTS: ""
+      ASPNETCORE_URLS: "http://0.0.0.0:5002"
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/ApiGateway/Dockerfile
+    depends_on:
+      - user-service
+      - finance-service
+    ports:
+      - "5000:5000"
+    environment:
+      JwtSettings__Secret: "super-secret-key-change-in-production-32chars!"
+      JwtSettings__Issuer: "CurrencyService"
+      JwtSettings__Audience: "CurrencyServiceClients"
+      ASPNETCORE_HTTP_PORTS: ""
+      ASPNETCORE_URLS: "http://0.0.0.0:5000"
+
+volumes:
+  pgdata:

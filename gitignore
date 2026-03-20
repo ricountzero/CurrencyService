@@ -1,0 +1,55 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+packages/
+
+# .NET
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Publish output
+publish/
+out/
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Secrets / environment overrides
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+.env
+
+# Test results
+TestResults/
+coverage/
+*.coveragexml
+*.trx
+
+# OS
+Thumbs.db
+.DS_Store
